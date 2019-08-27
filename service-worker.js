@@ -16,7 +16,7 @@ self.addEventListener('fetch', event => {
 self.addEventListener('message', function(event){
     //console.log("Message recieved in service worker:", event);
     var data = event.data;
-    var clientId = event.source.id
+    var clientId = ev.target.Client;
     self.syncTabState(data, clientId);
 });
 
